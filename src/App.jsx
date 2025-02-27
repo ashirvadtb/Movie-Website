@@ -11,6 +11,9 @@ import Details from "./pages/details/Details";
 import SearchResult from './pages/searchResult/SearchResult';
 import Explore from './pages/explore/Explore';
 import PageNotFound from './pages/404/PageNotFound';
+import Login from './pages/Login';
+import Signup from "./pages/Signup";
+
 
 function App() {
 
@@ -63,6 +66,9 @@ const genresCall = async ()=>{
   return (<BrowserRouter>
   <Header/>
   <Routes>
+    <Route path="/login" element={<Login />} />
+    <Route path="/signup" element={<Signup />} />
+    <Route path="/" element={<h1>Home Page</h1>} />
     <Route path='/' element={<Home/>}/>
     <Route path='/:mediaType/:id' element={<Details/>}/>
     <Route path='/search/:query' element={<SearchResult/>}/>
