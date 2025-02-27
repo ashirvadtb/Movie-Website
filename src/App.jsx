@@ -66,10 +66,9 @@ const genresCall = async ()=>{
   return (<BrowserRouter>
   <Header/>
   <Routes>
+    <Route path='/' element={<Home/>}/>
     <Route path="/login" element={<Login />} />
     <Route path="/signup" element={<Signup />} />
-    <Route path="/" element={<h1>Home Page</h1>} />
-    <Route path='/' element={<Home/>}/>
     <Route path='/:mediaType/:id' element={<Details/>}/>
     <Route path='/search/:query' element={<SearchResult/>}/>
     <Route path='/explore/:mediaType' element={<Explore/>}/>
